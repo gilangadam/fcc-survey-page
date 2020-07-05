@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC Survey Form Task</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Restaurant Service Satisfaction Form</h1>
+            <p id="description" class="description text-center">
+                Thank you for visiting our Restaurant
+            </p>
+        </header>
+        <form id="survey-form">
+            <!-- name -->
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-input" placeholder="Enter your name" required />
+            </div>
+
+            <!-- email -->
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-input" placeholder="Enter your Email" required />
+            </div>
+
+            <!-- age -->
+            <div class="form-group">
+                <label id="number-label" for="number">Age</label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-input" placeholder="Age" />
+            </div>
+
+            <!-- date -->
+            <div class="form-group">
+                <label for="visit-date">Visiting Date: <span class="clue"> (optional)</span></label>
+                <input type="date" name="date" id="visit-date" class="form-input" value="2020-01-01" min="2010-01-01" max="2050-12-31" />
+            </div>
+
+            <!-- =======RADIO BUTTON======= -->
+            <!-- food serving and taste -->
+            <div class="form-group">
+                <p>How's the food serving and taste?</p>
+                <label><input name="food-service" value="fantastic" type="radio" class="input-radio" checked/>Fantastic</label>
+                <label><input name="food-service" value="good" type="radio" class="input-radio"/> Good</label>
+                <label><input name="food-service" value="average" type="radio" class="input-radio"/> Average</label>
+                <label><input name="food-service" value="below-average" type="radio" class="input-radio"/> Below Average</label>
+                <label><input name="food-service" value="unacceptable" type="radio" class="input-radio"/> Unacceptable</label>
+            </div>
+
+            <!-- beverage serving and taste -->
+            <div class="form-group">
+                <p>How's the beverage serving and taste?</p>
+                <label><input name="beverage-service" value="fantastic" type="radio" class="input-radio" checked/>Fantastic</label>
+                <label><input name="beverage-service" value="good" type="radio" class="input-radio"/>Good</label>
+                <label><input name="beverage-service" value="average" type="radio" class="input-radio"/>Average</label>
+                <label><input name="beverage-service" value="below-average" type="radio" class="input-radio"/>Below Average</label>
+                <label><input name="beverage-service" value="unacceptable" type="radio" class="input-radio"/>Unacceptable</label>
+            </div>
+
+            <!-- Restaurant ambience -->
+            <div class="form-group">
+                <p>How's the restaurant overall ambiance?</p>
+                <label><input name="overall-ambiance" value="fantastic" type="radio" class="input-radio" checked/>Fantastic</label>
+                <label><input name="overall-ambiance" value="good" type="radio" class="input-radio"/>Good</label>
+                <label><input name="overall-ambiance" value="average" type="radio" class="input-radio"/>Average</label>
+                <label><input name="overall-ambiance" value="below-average" type="radio" class="input-radio"/>Below Average</label>
+                <label><input name="overall-ambiance" value="unacceptable" type="radio" class="input-radio"/>Unacceptable</label>
+            </div>
+
+            <!-- Menu diversity -->
+            <div class="form-group">
+                <p>How's the price comparing to the product's quality?</p>
+                <label><input name="price" value="fantastic" type="radio" class="input-radio" checked/>Fantastic</label>
+                <label><input name="price" value="good" type="radio" class="input-radio"/>Good</label>
+                <label><input name="price" value="average" type="radio" class="input-radio"/>Average</label>
+                <label><input name="price" value="below-average" type="radio" class="input-radio"/>Below Average</label>
+                <label><input name="price" value="unacceptable" type="radio" class="input-radio"/>Unacceptable</label>
+            </div>
+
+            <!-- Price -->
+            <div class="form-group">
+                <p>How's the menu diversity?</p>
+                <label><input name="menu-diversity" value="fantastic" type="radio" class="input-radio" checked/>Fantastic</label>
+                <label><input name="menu-diversity" value="good" type="radio" class="input-radio"/>Good</label>
+                <label><input name="menu-diversity" value="average" type="radio" class="input-radio"/>Average</label>
+                <label><input name="menu-diversity" value="below-average" type="radio" class="input-radio"/>Below Average</label>
+                <label><input name="menu-diversity" value="unacceptable" type="radio" class="input-radio"/>Unacceptable</label>
+            </div>
+
+            <!-- =======CHECKBOX======= -->
+            <!-- Well Service -->
+            <div class="form-group">
+                <p>
+                    You think our crews has done very well in:
+                    <span>(Check all that apply)</span>
+                </p>
+                <label><input name="service" value="welcome-greeting-upon-arrival" type="checkbox" class="input-checkbox"/>Welcome greeting upon arrival</label>
+                <label><input name="service" value="wait-time-before-being-served" type="checkbox" class="input-checkbox"/>Wait time before being served</label>
+                <label><input name="service" value="hospitality-and-courtesy" type="checkbox" class="input-checkbox"/>Hospitality and Courtesy</label>
+                <label><input name="service" value="appearance-and-tidiness" type="checkbox" class="input-checkbox"/>Appearance and Tidiness</label>
+                <label><input name="service" value="product-knowledge" type="checkbox" class="input-checkbox"/>Product knowledge</label>
+            </div>
+
+            <!-- =======DROPDOWN======= -->
+            <!-- Membership -->
+            <div class="form-group">
+                <p>Which of our membership card you have?</p>
+                <select id="dropdown" name="member" class="form-input" required>
+                <option disabled selected value>Select membership card</option>
+                <option value="diamond">Diamond</option>
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+                <option value="bronze">Bronze</option>
+                <option value="none">I don't have membership card</option>
+            </select>
+            </div>
+
+            <!-- Comment box -->
+            <div class="form-group">
+                <p>
+                    Opinions or suggestions for our service:
+                </p>
+                <textarea name="suggestion" id="suggestions" class="textarea-input" placeholder="Enter your opinions or suggestions here"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" id="submit" class="button-style">
+                Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

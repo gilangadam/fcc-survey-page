@@ -1,5 +1,6 @@
-# survey-page
+# FCC-Survey-Form
+FreeCodeCamp: Responsive Web Design Projects - Build a Survey Form
 
-second diy project
+This is the second of the Responsive Web Design Projects in Free Code Camp and the objective was to build a survey form that meets Free Code Camp's user stories.
 
-simple restaurant satisfaction survey form
+You can find a list of requirements and further information on the project [here](https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form) and you can view the completed project by clicking [here](https://gilangadam.github.io/fcc-survey-page/).
